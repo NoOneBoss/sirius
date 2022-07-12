@@ -8,4 +8,294 @@
 
     <!-- Место для верстки -->
 
+    <Button
+        android:id="@+id/install"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="366dp"
+        android:layout_height="47dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/alata"
+        android:foreground="@drawable/install_button"
+        android:foregroundGravity="top"
+        android:foregroundTint="#00FFFFFF"
+        android:foregroundTintMode="add"
+        android:paddingTop="0dp"
+        android:text="Install"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:typeface="sans"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recycler"
+        app:layout_constraintVertical_bias="0.066"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <ImageView
+        android:id="@+id/titleImage"
+        android:layout_width="415dp"
+        android:layout_height="230dp"
+        android:layout_marginTop="-20dp"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:srcCompat="@drawable/loading_in_progress" />
+
+    <TextView
+        android:id="@+id/titleName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-25dp"
+        android:layout_marginTop="-30dp"
+        android:fontFamily="sans-serif-black"
+        android:text="TextView"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/logoImage"
+        app:layout_constraintTop_toBottomOf="@+id/titleImage"
+        app:layout_constraintVertical_bias="0.122"
+        tools:text="titleName" />
+
+    <TextView
+        android:id="@+id/reviews"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-25dp"
+        android:layout_marginTop="7dp"
+        android:fontFamily="@font/alatsi"
+        android:text="Reviews &amp; Ratings"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.225"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionText"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="reviews" />
+
+    <TextView
+        android:id="@+id/reviewsSmall"
+        android:layout_width="63dp"
+        android:layout_height="13dp"
+        android:layout_marginStart="-3dp"
+        android:layout_marginTop="6dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="TextView"
+        android:textColor="#4C4C4C"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.058"
+        app:layout_constraintStart_toEndOf="@+id/smallRating"
+        app:layout_constraintTop_toBottomOf="@+id/titleName"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="reviewsSmall" />
+
+    <ImageView
+        android:id="@+id/logoImage"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="-20dp"
+        android:layout_marginTop="-10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.092"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleImage"
+        app:srcCompat="@drawable/loading_in_progress" />
+
+    <RatingBar
+        android:id="@+id/smallRating"
+        style="@style/Widget.AppCompat.RatingBar.Small"
+        android:layout_width="82dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="-25dp"
+        android:layout_marginTop="5dp"
+        android:max="5"
+        android:progressTint="#FFD600"
+        app:layout_constraintStart_toEndOf="@+id/logoImage"
+        app:layout_constraintTop_toBottomOf="@+id/titleName" />
+
+    <LinearLayout
+        android:id="@+id/tagsLayout"
+        android:layout_width="215dp"
+        android:layout_height="23dp"
+        android:layout_marginTop="-25dp"
+        android:divider="@drawable/divider"
+        android:orientation="horizontal"
+        android:showDividers="middle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.191"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logoImage">
+
+        <TextView
+            android:id="@+id/firstTag"
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+            android:layout_weight="0.7"
+            android:fontFamily="@font/alatsi"
+            android:foreground="@drawable/circle_drawable"
+            android:paddingTop="2dp"
+            android:text="tag"
+            android:textAlignment="center"
+            android:textColor="#B344A9F4"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/secondTag"
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+            android:layout_weight="0.7"
+            android:fontFamily="@font/alatsi"
+            android:foreground="@drawable/circle_drawable"
+            android:paddingTop="2dp"
+            android:text="tag"
+            android:textAlignment="center"
+            android:textColor="#B344A9F4"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/thirdTag"
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+            android:layout_weight="0.7"
+            android:fontFamily="@font/alatsi"
+            android:foreground="@drawable/circle_drawable"
+            android:paddingTop="2dp"
+            android:text="tag"
+            android:textAlignment="center"
+            android:textColor="#B344A9F4"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floating_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:backgroundTint="@color/transparent_white"
+        android:clickable="true"
+        app:backgroundTint="@color/transparent_white"
+        app:elevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:pressedTranslationZ="0dp"
+        app:srcCompat="@drawable/back_button"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floating_other"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:backgroundTint="@color/transparent_white"
+        android:clickable="true"
+        app:backgroundTint="@color/transparent_white"
+        app:elevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.954"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:pressedTranslationZ="0dp"
+        app:srcCompat="@drawable/other_button"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/descriptionText"
+        android:layout_width="347dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/alatsi"
+        android:lineSpacingExtra="7sp"
+        android:paddingTop="2dp"
+        android:text="description"
+        android:textAlignment="viewStart"
+        android:textColor="#B3E1E1DE"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tagsLayout" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reviews">
+
+        <RatingBar
+            android:id="@+id/smallRating2"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:layout_width="82dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="16dp"
+            android:max="5"
+            android:progressTint="#FFD600"
+            app:layout_constraintStart_toEndOf="@+id/bigRating"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/reviewsSmall2"
+            android:layout_width="63dp"
+            android:layout_height="13dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="2dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="TextView"
+            android:textColor="#959595"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/bigRating"
+            app:layout_constraintTop_toBottomOf="@+id/smallRating2"
+            tools:text="reviewsSmall" />
+
+        <TextView
+            android:id="@+id/bigRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="-5dp"
+            android:text="TextView"
+            android:textColor="#FFFFFF"
+            android:textSize="48sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.111" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="410dp"
+        android:layout_height="128dp"
+        android:layout_marginTop="-30dp"
+        android:addStatesFromChildren="false"
+        android:nestedScrollingEnabled="false"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+        app:layout_constraintVertical_bias="0.087" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
